@@ -1,7 +1,6 @@
 SwipeBack [![Build Status](https://travis-ci.org/liuguangqiang/SwipeBack.png?branch=master)](https://travis-ci.org/liuguangqiang/SwipeBack)
 ===========
 
-Origin 
 ##Origin
 [SwipeBack](https://github.com/liuguangqiang/SwipeBack)
 
@@ -19,11 +18,17 @@ public enum DragDirectMode {
 
 ###Gradle
 ```
-dependencies {
-   	compile 'com.github.liuguangqiang.swipeback:library:1.0.2@aar'
+allprojects {
+	repositories {
+		maven { url 'https://jitpack.io' }
+	}
 }
 ```
-
+```
+dependencies {
+   	compile 'com.github.pavel163:SwipeBack:1.0.0'
+}
+```
 
 ###SwipeBackActivity
 SwipeBackActivity is a base activity for using this library more easier.This Activity will help us to show a shadow.
@@ -35,25 +40,10 @@ public class CommonActivity extends SwipeBackActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_common);
-        setDragEdge(SwipeBackLayout.DragEdge.LEFT);
+        setDragDirectMode(SwipeBackLayout.DragDirectMode.VERTICAL);
     }
 
 }
-```
-
-###Layout and activity theme.
-SwipeBackLayout must contains only one direct child.
-
-```
-<com.liuguangqiang.swipeback.SwipeBackLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/swipeBackLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-	
-	<!-- SwipeBackLayout must contains only one direct child -->
-
-</com.liuguangqiang.swipeback.SwipeBackLayout>
 ```
 
 
