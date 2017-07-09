@@ -13,9 +13,9 @@ public enum DragDirectMode {
    HORIZONTAL
 }
 ```
-##Usage
+## Usage
 
-###Gradle
+### Gradle
 ```
 allprojects {
 	repositories {
@@ -29,7 +29,7 @@ dependencies {
 }
 ```
 
-###SwipeBackActivity
+### SwipeBackActivity
 SwipeBackActivity is a base activity for using this library more easier.This Activity will help us to show a shadow.
 
 ```
