@@ -1,7 +1,7 @@
 SwipeBack [![Build Status](https://travis-ci.org/liuguangqiang/SwipeBack.png?branch=master)](https://travis-ci.org/liuguangqiang/SwipeBack)
 ===========
 
-##Origin
+## Origin
 [SwipeBack](https://github.com/liuguangqiang/SwipeBack)
 
 SwipeBack is a android library that can finish a activity by using gesture.
