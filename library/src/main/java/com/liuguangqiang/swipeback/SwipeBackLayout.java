@@ -146,7 +146,7 @@ public class SwipeBackLayout extends ViewGroup {
     public SwipeBackLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        viewDragHelper = ViewDragHelper.create(this, 1.0f, new ViewDragHelperCallBack());
+        viewDragHelper = ViewDragHelper.create(this, 0.1f, new ViewDragHelperCallBack());
         chkDragable();
     }
 
