@@ -62,6 +62,19 @@ public class SwipeBackLayout extends ViewGroup {
 
         BOTTOM
     }
+    
+    public Action finishAction ; 
+    interface Action {
+        /**
+         * Executes the action
+         *
+         * @param obj The action parameter
+         * @throws Exception An Exception is thrown if there is an error executing the
+         * action
+         */
+        fun run()
+    }
+ public Action finishAction ;
 
     private DragDirectMode dragDirectMode = DragDirectMode.EDGE;
 
@@ -343,9 +356,14 @@ public class SwipeBackLayout extends ViewGroup {
     }
 
     private void finish() {
+        if(finishAction!= null ){
+            finishAction.run();
+        }
+        /*
         Activity act = (Activity) getContext();
         act.finish();
         act.overridePendingTransition(0, android.R.anim.fade_out);
+        */
     }
 
     private class ViewDragHelperCallBack extends ViewDragHelper.Callback {
